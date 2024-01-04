@@ -12,13 +12,16 @@ function clickNumber(val) {
 
     if(result.value =="0" && val == "0"){
         result.value = "0";
+      }else if(result.value =="0" && val == "00"){
+        result.value = "0";
       }else if(result.value == "0" && val == "."){
         result.value = "0.";
       }else if(result.value == "0"){
         result.value = val;
       }else{
         if(val == "." && result.value.includes(".")){
-        }else{
+        }else if(val == "." && is_ope_last()){
+        }else {
           result.value += val;
         }
       }
@@ -48,5 +51,5 @@ function calculateResult() {
 }
 
 function is_ope_last(){
-  return ["+","-","×","÷"].includes(result.value.toString().slice(-1));
+  return ["+","-","×","÷","."].includes(result.value.toString().slice(-1));
 }
