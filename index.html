@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title>電卓</title>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" id="result" value="0">
+        <table class="buttons">
+            <tr>
+                <td><button onclick="clickNumber(this.innerHTML)">7</button></td>
+                <td><button onclick="clickNumber(this.innerHTML)">8</button></td>
+                <td><button onclick="clickNumber(this.innerHTML)">9</button></td>
+                <td><button onclick="clickOperator(this.innerHTML)">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="clickNumber(this.innerHTML)">4</button></td>
+                <td><button onclick="clickNumber(this.innerHTML)">5</button></td>
+                <td><button onclick="clickNumber(this.innerHTML)">6</button></td>
+                <td><button onclick="clickOperator(this.innerHTML)">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="clickNumber(this.innerHTML)">1</button></td>
+                <td><button onclick="clickNumber(this.innerHTML)">2</button></td>
+                <td><button onclick="clickNumber(this.innerHTML)">3</button></td>
+                <td><button onclick="clickOperator(this.innerHTML)">×</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="clickNumber(this.innerHTML)">0</button></td>
+                <td><button onclick="clickNumber(this.innerHTML)">00</button></td>
+                <td><button onclick="clickNumber(this.innerHTML)">.</button></td>
+                <td><button onclick="clickOperator(this.innerHTML)">÷</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="clearResult()">AC</button></td>
+                <td colspan="2"><button onclick="calculateResult()">=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
